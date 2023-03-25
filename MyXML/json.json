@@ -1,0 +1,50 @@
+{
+  "PurchaseOrder": {
+	"PurchaseOrderNumber": "12345",
+	"OrderDate": "2021-03-28",
+	"Customer": {
+	  "Id": "CUST-1",
+	  "Name": "Test Customer",
+	  "Email": "test@test.com",
+	  "Mobile": "1234567890"
+	},
+	"Address": [
+	  {
+		"Type": "Shipping",
+		"Name": "Test Shipping",
+		"Street": "123 Maple Street",
+		"City": "Mill Valley",
+		"State": "CA",
+		"Zip": 10999,
+		"Country": "USA"
+	  },
+	  {
+		"Type": "Billing",
+		"Name": "Test Billing",
+		"Street": "8 Oak Avenue",
+		"City": "Old Town",
+		"State": "PA",
+		"Zip": 95819,
+		"Country": "USA"
+	  }
+	],
+	"DeliveryNotes": "Please leave packages in shed by driveway.",
+	"Item": [
+	  {
+		"PartNumber": "872-AA",
+		"ProductName": "Lawnmower",
+		"Quantity": 1,
+		"USPrice": 148.95,
+		"Comment": "Confirm this is electric",
+		"ShipDate": "2021-03-28"
+	  },
+	  {
+		"PartNumber": "926-AA",
+		"ProductName": "Baby Monitor",
+		"Quantity": 2,
+		"USPrice": 39.98,
+		"ShipDate": "2021-03-28"
+	  }
+	]
+  }
+}
