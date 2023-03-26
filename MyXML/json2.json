@@ -1,0 +1,39 @@
+{
+  "id": 1,
+  "purchaseordernumber": 12345,
+  "deliverynotes": "Please leave packages in shed by driveway.",
+  "orderdate": "2021-03-28",
+  "items": [
+	{
+	  "id": 1,
+	  "comment": "Confirm this is electric",
+	  "partnumber": "872-AA",
+	  "productname": "Lawnmower",
+	  "quantity": 1,
+	  "usprice": 148.95,
+	  "shipdate": "2021-03-28"
+	}
+  ],
+  "addresses": [
+	{
+	  "id": 2,
+	  "zip": 95819,
+	  "type": "Billing",
+	  "state": "PA",
+	  "street": "8 Oak Avenue",
+	  "country": "USA",
+	  "city": "Old Town",
+	  "name": "Test Billing"
+	},
+	{
+	  "id": 1,
+	  "zip": 10999,
+	  "type": "Shipping",
+	  "state": "CA",
+	  "street": "123 Maple Street",
+	  "country": "USA",
+	  "city": "Mill Valley",
+	  "name": "Test Shipping"
+	}
+  ]
+}

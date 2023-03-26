@@ -1,5 +1,8 @@
 package com.example.jsonjparestdemo.db;
 
+import com.example.jsonjparestdemo.db.Purchaseorder;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -30,6 +33,7 @@ public class Item {
 	@Column(name = "shipdate")
 	private LocalDate shipdate;
 
+	@JsonBackReference
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "purchaseorderid", nullable = false)
 	private Purchaseorder purchaseorderid;

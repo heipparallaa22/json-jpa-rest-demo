@@ -1,6 +1,11 @@
 package com.example.jsonjparestdemo.db;
 
+import com.example.jsonjparestdemo.db.Purchaseorder;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "customer", schema = "jsonjpa")
@@ -21,6 +26,10 @@ public class Customer {
 
 	@Column(name = "name", length = 100)
 	private String name;
+
+	@JsonManagedReference
+	@OneToMany(mappedBy = "customerid")
+	private Set<Purchaseorder> purchaseorders = new LinkedHashSet<>();
 
 	public Integer getId() {
 		return id;
@@ -60,6 +69,14 @@ public class Customer {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Set<Purchaseorder> getPurchaseorders() {
+		return purchaseorders;
+	}
+
+	public void setPurchaseorders(Set<Purchaseorder> purchaseorders) {
+		this.purchaseorders = purchaseorders;
 	}
 
 }

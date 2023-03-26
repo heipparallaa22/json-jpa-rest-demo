@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+
+  psqldb:
+    image: postgres
+    container_name: psql-db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=pg
+      - POSTGRES_PASSWORD=pg
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    ports:
+      - 80:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pg@pg.com
+      - PGADMIN_DEFAULT_PASSWORD=pg
+    depends_on:
+      - psqldb

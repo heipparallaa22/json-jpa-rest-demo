@@ -1,5 +1,8 @@
 package com.example.jsonjparestdemo.db;
 
+import com.example.jsonjparestdemo.db.Purchaseorder;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -31,6 +34,7 @@ public class Address {
 	@Column(name = "name", length = 100)
 	private String name;
 
+	@JsonBackReference
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "purchaseorderid", nullable = false)
 	private Purchaseorder purchaseorderid;
