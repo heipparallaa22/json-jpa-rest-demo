@@ -1,0 +1,1 @@
+psql -h localhost -U pg -d postgres -a -f /psql-tables.sql
